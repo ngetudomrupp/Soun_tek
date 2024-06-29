@@ -9,7 +9,6 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
 
 ?>
 <html lang="en" class="light-style layout-navbar-fixed layout-wide" dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="front-pages">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
@@ -42,7 +41,7 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
           <!-- Mobile menu toggle: End-->
           <a href="landing-page.html" class="app-brand-link">
             <span>
-              <img src="<?= $db->url(); ?>/SUNFIX/Soun_tek/assets/vendor/img/logos/logo-1.png" alt="" width="130">
+              <img src="<?= $db->url(); ?>/SUNFIX/Soun_tek/assets/vendor/img/logos/STCO-B.png" alt="" width="100">
             </span>
           </a>
         </div>
@@ -53,12 +52,12 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
             <i class="ti ti-x ti-sm"></i>
           </button>
           <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home</a>
+            <li class="nav-item active">
+              <a class="nav-link fw-medium" aria-current="page" href="index.php">Home</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link fw-medium" href="landing-page.html#landingContact">Contact us</a>
+              <a class="nav-link fw-medium" href="#landingContact">Contact us</a>
             </li>
 
           </ul>
@@ -81,11 +80,6 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
               <li>
                 <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
                   <span class="align-middle"><i class='bx bx-moon' style="margin-right: 10px; font-size: 20px; "></i>Dark</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
-                  <span class="align-middle"><i class='bx bx-desktop' style="margin-right: 10px; font-size: 20px;"></i>System</span>
                 </a>
               </li>
             </ul>
@@ -125,12 +119,20 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
               <div class="card-body">
                 <?php
                 if (isset($result) && $result != TRUE) {
-                ?>
-                  <div class="alert alert-danger alert-dismissible" role="alert">
-                    Product Not Found.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                <?php
+                  ?>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      Product Not Found.
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  <?php
+                }
+                if (isset($result) && $result == TRUE) {
+                  ?>
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                      Scroll Down to See Product Details
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  <?php
                 }
                 ?>
                 <form action="index.php" method="POST">
@@ -157,7 +159,7 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
     <?php
     if (isset($_POST['id_nbr']) && isset($_POST['code_nbr']) && $result) {
     ?>
-      <section id="landingContact" class="section-py bg-body landing-contact">
+      <section class="section-py bg-body landing-contact">
         <div class="container">
           <div class="col-lg-12">
             <h4 class="text-center">RESULTS</h4>
@@ -279,11 +281,104 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
             </div>
           </div>
         </div>
+      </section>
+    <?php
+        }
+    ?>
+
+    <!-- Contact Us: Start -->
+    <section id="landingContact" class="section-py bg-body landing-contact">
+      <div class="container">
+        <div class="text-center mb-3 pb-1">
+          <span class="badge bg-label-primary">Contact US</span>
+        </div>
+        <h3 class="text-center mb-1">
+          <span class="position-relative fw-bold z-1">Let's work together</span>
+        </h3>
+        <p class="text-center mb-4 mb-lg-5 pb-md-3">Any question or remark? just write us a message</p>
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="contact-img-box position-relative border p-2 h-100">
+              <img
+                src="<?= $db->url(); ?>/SUNFIX/Soun_tek/assets/vendor/img/front-pages/icons/contact-border.png"<?= $db->url(); ?>/SUNFIX/Soun_tek/assets/vendor/js/helpers.js"
+                alt="contact border"
+                class="contact-border-img position-absolute d-none d-md-block scaleX-n1-rtl" />
+              <img
+                src="<?= $db->url(); ?>/SUNFIX/Soun_tek/assets/vendor/img/front-pages/icons/contact-customer-service.png"
+                alt="contact customer service"
+                class="contact-img w-100 scaleX-n1-rtl" />
+              <div class="pt-3 px-4 pb-1">
+                <div class="row gy-3 gx-md-4">
+                  <div class="col-md-6 col-lg-12 col-xl-6">
+                    <div class="d-flex align-items-center">
+                      <div class="badge bg-label-primary rounded p-2 me-2"><i class="fa fa-envelope"></i></div>
+                      <div>
+                        <p class="mb-0">Email</p>
+                        <h5 class="mb-0">
+                          <a href="mailto:example@gmail.com" class="text-heading">example@gmail.com</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-12 col-xl-6">
+                    <div class="d-flex align-items-center">
+                      <div class="badge bg-label-success rounded p-2 me-2">
+                        <i class="fa fa-phone"></i>
+                      </div>
+                      <div>
+                        <p class="mb-0">Phone</p>
+                        <h5 class="mb-0"><a href="tel:+1234-568-963" class="text-heading">+1234 568 963</a></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="mb-1">Send a message</h4>
+                <p class="mb-4">
+                  If you would like to discuss anything related to payment, account, licensing,<br
+                    class="d-none d-lg-block" />
+                  partnerships, or have pre-sales questions, you’re at the right place.
+                </p>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="contact-form-fullname">Full Name</label>
+                      <input type="text" class="form-control" id="contact-form-fullname" placeholder="FullName" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="contact-form-email">Email</label>
+                      <input
+                        type="text"
+                        id="contact-form-email"
+                        class="form-control"
+                        placeholder="Email" />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="contact-form-message">Message</label>
+                      <textarea
+                        id="contact-form-message"
+                        class="form-control"
+                        rows="8"
+                        placeholder="Write a message"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us: End -->
   </div>
-  </section>
-<?php
-    }
-?>
 <!-- Results Us: End -->
 </div>
 
@@ -299,8 +394,9 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
             document.write(new Date().getFullYear());
           </script>
         </span>
-        <a href="https://pixinvent.com" target="_blank" class="fw-medium text-white footer-link">Pixinvent,</a>
-        <span class="footer-text"> Made with ❤️ for a better web.</span>
+        <span class="footer-text">Copyright By</span>
+        <a href="https://pixinvent.com" target="_blank" class="fw-medium text-white footer-link">eCloudView</a>
+        <span class="footer-text">. All Right Reserved</span>
       </div>
     </div>
   </div>

@@ -6,23 +6,24 @@ if (isset($_POST['id_nbr']) && isset($_POST['code_nbr'])) {
   $con = "cus_products.nbr_id='" . $_POST['id_nbr'] . "' AND cus_products.code='" . $_POST['code_nbr'] . "'";
   $result = $db->getProductByCode($con);
 }
-include_once("views/header.php");
+$base_dir = $db->base_dir();
+include($base_dir . "/Views/header.php");
 ?>
 
 <body>
   <?php
-  include_once("views/navbar.php");
+ include($base_dir . "/Views/navbar.php");
   ?>
   <!-- Sections:Start -->
   <div data-bs-spy="scroll" class="scrollspy-example">
     <!-- Hero: Start -->
     <?php
-    include_once("views/hero_section.php");
+include($base_dir . "/Views/hero_section.php");
     ?>
     <!-- Hero: End -->
     <!-- Results: Start -->
     <?php
-    include_once("views/product_detail.php");
+include($base_dir . "/Views/product_detail.php");
     ?>
     <!-- Results Us: End -->
   </div>
@@ -30,7 +31,8 @@ include_once("views/header.php");
 
   <!-- Footer: Start -->
   <?php
-  include_once("views/footer.php");
+ include($base_dir . "/Views/contact_us.php");
+  include($base_dir . "/Views/footer.php");
   ?>
   <!-- Footer: End -->
   <!-- Main JS -->

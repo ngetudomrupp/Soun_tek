@@ -12,26 +12,25 @@ include($base_dir . "/Views/header.php");
 
 <body>
   <?php
- include($base_dir . "/Views/navbar.php");
+  include($base_dir . "/Views/navbar.php");
   ?>
   <!-- Sections:Start -->
   <div data-bs-spy="scroll" class="scrollspy-example">
     <!-- Hero: Start -->
     <?php
-include($base_dir . "/Views/hero_section.php");
+    include($base_dir . "/Views/hero_section.php");
     ?>
     <!-- Hero: End -->
     <!-- Results: Start -->
     <?php
-include($base_dir . "/Views/product_detail.php");
+    include($base_dir . "/Views/product_detail.php");
     ?>
     <!-- Results Us: End -->
   </div>
   <!-- / Sections:End -->
-
   <!-- Footer: Start -->
   <?php
- include($base_dir . "/Views/contact_us.php");
+  include($base_dir . "/Views/contact_us.php");
   include($base_dir . "/Views/footer.php");
   ?>
   <!-- Footer: End -->

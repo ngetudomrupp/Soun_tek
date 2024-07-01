@@ -11,11 +11,7 @@
                 <!-- Mobile menu toggle: End-->
                 <a href="index.php" class="app-brand-link">
                     <span>
-<<<<<<< HEAD
                         <img src="<?= $db->url(); ?>/assets/vendor/img/logos/logo-1.png" alt="" width="130">
-=======
-                        <img src="<?= $db->base_url(); ?>assets/vendor/img/logos/logo.png" alt="" width="130">
->>>>>>> cb0e325461f65f7a1752dfd349fa19c91f11f944
                     </span>
                 </a>
             </div>
@@ -66,7 +62,7 @@
                 <!-- / Style Switcher-->
 
                 <!-- navbar button: Start -->
-                
+
                 <!-- navbar button: End -->
             </ul>
             <!-- Toolbar: End -->

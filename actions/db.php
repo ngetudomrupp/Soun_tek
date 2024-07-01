@@ -39,4 +39,8 @@ class Database extends Connect
         $base_url = $protocol . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
         return $base_url;
     }
+    function base_dir()
+    {
+        return $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['PHP_SELF']);
+    }
 }

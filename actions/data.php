@@ -3,6 +3,6 @@ class Connect
 {
     protected $host = "localhost";
     protected $username = "root";
-    protected $pass = "";
+    protected $pass = "root";
     protected $db = "sunfix_ecloudview_dev";
 }

@@ -11,7 +11,7 @@
                 <!-- Mobile menu toggle: End-->
                 <a href="landing-page.html" class="app-brand-link">
                     <span>
-                        <img src="<?= $db->base_url(); ?>/assets/vendor/img/logos/logo-1.png" alt="" width="130">
+                        <img src="<?= $db->url(); ?>/assets/vendor/img/logos/logo-1.png" alt="" width="130">
                     </span>
                 </a>
             </div>

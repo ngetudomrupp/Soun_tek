@@ -7,7 +7,7 @@ class Database extends Connect
     {
         date_default_timezone_set("asia/phnom_penh");
         $this->con = new mysqli("$this->host", "$this->username", "$this->pass", "$this->db");
-        // $this->con->set_charset("utf-8");
+        $this->con->set_charset("utf-8");
         if (!$this->con) {
             echo "Error Connection";
         }
@@ -33,14 +33,10 @@ class Database extends Connect
         }
     }
 
-    function base_url()
+    function url()
     {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
         $base_url = $protocol . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
         return $base_url;
-    }
-    function base_dir()
-    {
-        return $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['PHP_SELF']);
     }
 }

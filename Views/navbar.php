@@ -9,9 +9,9 @@
                     <i class="fa fa-bars" aria-hidden="true" style="font-size: 18px;"></i>
                 </button>
                 <!-- Mobile menu toggle: End-->
-                <a href="landing-page.html" class="app-brand-link">
+                <a href="index.php" class="app-brand-link">
                     <span>
-                        <img src="<?= $db->base_url(); ?>/assets/vendor/img/logos/logo-1.png" alt="" width="130">
+                        <img src="<?= $db->base_url(); ?>assets/vendor/img/logos/logo.png" alt="" width="130">
                     </span>
                 </a>
             </div>
@@ -23,11 +23,11 @@
                 </button>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home</a>
+                        <a class="nav-link fw-medium" aria-current="page" href="index.php#landingHero">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link fw-medium" href="landing-page.html#landingContact">Contact us</a>
+                        <a class="nav-link fw-medium" href="index.php#landingContact">Contact us</a>
                     </li>
 
                 </ul>
@@ -62,13 +62,7 @@
                 <!-- / Style Switcher-->
 
                 <!-- navbar button: Start -->
-                <li>
-                    <a href="auth-login-cover.html" class="btn btn-primary" target="_blank">
-                        <span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1">
-                            <i class="fa fa-sign-in" aria-hidden="true"></i>
-                        </span><span class="d-none d-md-block">Login/Register</span>
-                    </a>
-                </li>
+                
                 <!-- navbar button: End -->
             </ul>
             <!-- Toolbar: End -->
